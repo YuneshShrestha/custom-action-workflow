@@ -9,6 +9,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Set up Git safe directory
+        run: git config --global --add safe.directory /github/workspace
+        
       - name: Set up Git credentials
         run: |
           git config --global user.email "yuneshshrestha24@gmail.com"
