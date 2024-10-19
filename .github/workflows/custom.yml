@@ -6,3 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: YuneshShrestha/custom-action@main
+      - name: Set up Git credentials
+        run: |
+          git config --global user.email "yuneshshrestha24@gmail.com"
+          git config --global user.name "GitHub Action"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
